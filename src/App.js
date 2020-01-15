@@ -8,9 +8,18 @@ class App extends React.Component {
   }
 
 
-  return(
-
-  )
+  render() {
+    return (
+      <div className="App">
+        <header className="urban-grind-app"></header>
+        <Router>
+          <NavBar />
+          <Switch>
+          </Switch>
+        </Router>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
