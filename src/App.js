@@ -1,4 +1,6 @@
 import React from 'react';
+import { Router, Route, Switch, Redirect } from 'react-router-dom'
+// import NavBar from 
 import './App.css';
 
 class App extends React.Component {
@@ -10,11 +12,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="urban-grind-app"></header>
+      <div className="evert-app">
         <Router>
           <NavBar />
           <Switch>
+            <Route exact path='/' component={} />
+            <Route path='/login' render={} />
+            <Route path='/signup' render={} />
+
           </Switch>
         </Router>
       </div>
