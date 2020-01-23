@@ -5,17 +5,17 @@ import App from './App';
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
-import App from './App';
 import rootReducer from './reducers/rootReducer'
 import thunk from 'redux-thunk'
-import * as serviceWorker from './serviceWorker';
+import 'typeface-roboto'
+import * as serviceWorker from './serviceWorker'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const middleware = [thunk]
 const store = createStore(
     rootReducer, composeEnhancers(
         applyMiddleware(...middleware)
-    ));
+      ));
 
 ReactDOM.render(
     <Provider store={store}>
