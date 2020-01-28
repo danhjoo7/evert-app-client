@@ -4,34 +4,38 @@ import { connect } from 'react-redux'
 import reAuth from './actions/reAuth'
 import fetchAllItems from './actions/fetchAllItems'
 import fetchSearchItems from './actions/fetchSearchItem'
-import navbar from './navbar/navbar'
 import searchContainer from './search/searchContainer'
-import sellContainer from './sell/sellContainer'
-import navbarContainer from './navbar/navbarContainer'
-
+import SellContainer from './sell/sellContainer'
+import NavBarContainer from './navbar/navbarContainer'
+import DisplayContainer from './display/displayContainer'
+import Favorites from './favorites/favoritesContainer'
+import Show from './show/Show'
+import Login from './user/signIn'
+import Signup from './user/signUp'
 import './App.css'
+
 
 class App extends React.Component {
 
   componentDidMount() {
     this.props.reAuth()
     this.props.fetchAllItems()
-    this.props.fetchSearchItems()
   }
 
   render() {
     return (
-      <div className="app">
-        <h1 className="evert-app">
-          Evert 
-        </h1>
+      <div className="evert-app">
         <Router>
-          {/* <NavBar /> */}
+          <NavBarContainer />
           <Switch>
-            {/* <Route exact path='/' component={} /> */}
-            {/* <Route path='/login' render={} /> */}
-            {/* <Route path='/signup' render={} /> */}
-
+            <Route exact path='/' render={(props) => <DisplayContainer {...props} />} />
+            <Route path='/login' render={(props) => <Login {...props} />} />
+            <Route path='/signup' render={(props) => <Signup {...props} />} />
+            <Route path='/my-favorites' render={(props) => <Favorites {...props} />} />
+            {/* <Route path='/my-profile' render={(props) => <Profile {...props} />} /> */}
+            <Route path='/sell-item' render={(props) => <SellContainer {...props} />} />
+            <Route path='/discover' render={(props) => <DisplayContainer {...props} />} />
+            <Route path='/item/:id' render={(props) => <Show {...props} />} />
           </Switch>
         </Router>
       </div>
@@ -39,18 +43,21 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStatetoProps = state => {
   return {
     currentUser: state.currentUser,
-    items: state.items
+    items: state.items,
+    displayItems: state.displayItems,
+    showItem: state.showItem
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchtoProps = dispatch => {
   return {
     reAuth: () => dispatch(reAuth()),
-    fetchAllItems: () => dispatch(fetchAllItems()),
-    fetchSearchItems: () => dispatch(fetchSearchItems())
+    fetchAllItems: () => dispatch(fetchAllItems())
+    // fetch search item
+    // display item 
   }
 }
 

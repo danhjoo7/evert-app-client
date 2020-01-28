@@ -4,7 +4,7 @@ const signUpUser = (e, state, history) => {
     const {name, username, password, location} = state
 
     return (dispatch) => {
-        fetch('http://localhost:3000/users',{
+        fetch('http://localhost:3001/api/v1/users', {
             method: "POST",
             headers: {
                 "Authorization": `${localStorage.getItem('jwt')}`,
@@ -25,7 +25,7 @@ const signUpUser = (e, state, history) => {
             dispatch({ type: "SET_CURRENT_USER", user: data.user })
             dispatch({ type: "ADD_USER", user: data.user })
             localStorage.setItem('jwt', data.jwt)
-            history.push('/home')
+            history.push('/discover')
         })
     }
 

@@ -1,4 +1,4 @@
-const searchItem = (e, state, history) => {
+const SearchItem = (e, state, history) => {
     e.preventDefault()
 
     return (dispatch) => {
@@ -8,3 +8,5 @@ const searchItem = (e, state, history) => {
         
     }
 }
+
+export default SearchItem

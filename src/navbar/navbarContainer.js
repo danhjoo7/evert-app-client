@@ -1,34 +1,19 @@
-import React from 'react'
-import SearchBar from './searchBar'
 import { connect } from 'react-redux'
-import navbar from './navbar'
+import NavBar from './navbar'
+import logOut from '../actions/logOut'
 
 
-class navBarContainer extends React.Component {
-    constructor() {
-        super()
-
-        this.state = {
-            search: ''
-        }
+const mapStatetoProps = state => {
+    return {
+        currentUser: state.currentUser
     }
+}
 
-    handleChange = (e) => {
-         this.setState({
-            search: e.target.value
-        })
-    }
-
-    render() {
-        return (
-            <div>
-                <SearchBar search={this.state.search} onChange={this.handleChange} />
-                <navBar />
-            </div>
-        )
+const mapDispatchtoProps = dispatch => {
+    return {
+        logOut: () => dispatch(logOut())
     }
 }
 
 
-
-export default navBarContainer
+export default connect(mapStatetoProps, mapDispatchtoProps)(NavBar)

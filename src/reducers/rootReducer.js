@@ -16,11 +16,13 @@ const rootReducer = (state = initialState, action) => {
         // case 'SET_ALL_USERS':
         //     return { ...state, users: action.users }
         case 'CLEAR_CURRENT_USER':
-            return {...state, currentUser: {} }
+            return { ...state, currentUser: {} }
         case 'ADD_USER':
             return { ...state, users: [...state.users, action.user] }
         case 'SEARCH':
             return { ...state, search: action.search }
+        case 'GET_ALL_ITEMS':
+            return { ...state, items: action.items }
         default:
             return state
     }

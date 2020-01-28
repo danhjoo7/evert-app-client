@@ -13,8 +13,6 @@ const signIn = (e, state, history) => {
                 user: {
                     username: state.username,
                     password: state.password,
-                    name: state.name,
-                    location: state.location
                 }
             })
         })
@@ -22,7 +20,7 @@ const signIn = (e, state, history) => {
             .then(data => {
                 dispatch({ type: "SET_CURRENT_USER", user: data.user })
                 localStorage.setItem('jwt', data.jwt)
-                history.push('/home')
+                history.push('/discover')
             })
 
     }
