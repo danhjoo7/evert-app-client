@@ -1,6 +1,7 @@
 import React from 'react'
-import ItemImagesContainer from './ItemImagesContainer'
-import ItemDetails from './ItemDetails'
+import { connect } from 'react-redux'
+import ItemImagesContainer from './itemImagesContainer'
+import ItemDetails from './itemDetails'
 
 const Show = () => {
     return (
@@ -15,4 +16,10 @@ const Show = () => {
     )
 }
 
-export default Show
+const mapStatetoProps = state => {
+    return {
+        
+    }
+}
+
+export default connect(mapStatetoProps, null)(Show)

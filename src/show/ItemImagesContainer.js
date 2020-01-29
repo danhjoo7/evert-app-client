@@ -4,7 +4,7 @@ class ItemImagesContainer extends React.Component {
     render() {
         return (
             <div>
-
+                
             </div>
         )
     }

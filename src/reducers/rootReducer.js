@@ -4,7 +4,8 @@ const initialState = {
     search: '',
     items: [],
     searchItems: [],
-    favorites: []
+    favorites: [],
+    // selectedItem:
 }
 
 const rootReducer = (state = initialState, action) => {

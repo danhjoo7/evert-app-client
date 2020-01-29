@@ -14,7 +14,7 @@ class NavBar extends React.Component {
 
     showIfLoggedIn() {
         if (this.props.currentUser) {
-            return (<Link className="site-nav-item" id="my-projects" to="/my-favorites">ME</Link>);
+            return (<Link className="site-nav-item" id="my-favorites" to="/my-favorites">ME</Link>);
         }
     }
 
@@ -31,7 +31,7 @@ class NavBar extends React.Component {
                 </div>
                 <div className="rightnav">
                     <div className="explore-logo">
-                        <Link className="site-nav-item" to="/categories">
+                        <Link className="site-nav-item" to="/discover">
                             <img className="explore" src="http://res.cloudinary.com/noah-s-kang/image/upload/v1501275950/compass-icon-3_ixdm3h.svg" />
                         </Link>
                     </div>
