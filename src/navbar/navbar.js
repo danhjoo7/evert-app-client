@@ -6,7 +6,7 @@ class NavBar extends React.Component {
 
     loginOrOut() {
         if (this.props.currentUser) {
-            return (<button className="site-nav-item" onClick={this.props.logout} id="log-out">LOG OUT</button>);
+            return (<button className="site-nav-item" onClick={this.props.logout} id="log-out">LOG OUT</button>)
         } else {
             return (<Link className="site-nav-item" to="/login">LOG IN</Link>);
         }
@@ -14,7 +14,7 @@ class NavBar extends React.Component {
 
     showIfLoggedIn() {
         if (this.props.currentUser) {
-            return (<Link className="site-nav-item" id="my-favorites" to="/my-favorites">ME</Link>);
+            return (<Link className="site-nav-item" id="my-favorites" to="/my-favorites">ME</Link>)
         }
     }
 

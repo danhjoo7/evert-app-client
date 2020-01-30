@@ -1,12 +1,15 @@
-const SearchItem = (e, state, history) => {
+
+
+const fetchSearchItem = (e) => {
     e.preventDefault()
 
     return (dispatch) => {
-        dispatch({ type: 'SEARCH' })
+        const searchTerm = e.target.value  
+        fetch('http://localhost:3001/api/v1/items/${searchTerm}')
 
         // where we filter the results according to the user input 
         
     }
 }
 
-export default SearchItem
+export default fetchSearchItem

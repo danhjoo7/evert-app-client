@@ -1,7 +1,6 @@
 const initialState = {
     currentUser: {},
     users: [],
-    search: '',
     items: [],
     searchItems: [],
     favorites: [],

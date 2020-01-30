@@ -56,7 +56,6 @@ const mapDispatchtoProps = dispatch => {
   return {
     reAuth: () => dispatch(reAuth()),
     fetchAllItems: () => dispatch(fetchAllItems())
-    // fetch search item
     // display item 
   }
 }

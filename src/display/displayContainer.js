@@ -6,6 +6,7 @@ class DisplayContainer extends React.Component {
     render() {
         return (
             <div className="display-container">
+                <h2>Discover new items.</h2>
                 <div className="item-list">
                     {this.props.items.map(item => {
                         return <ItemCard key={item.id} item={item} />
