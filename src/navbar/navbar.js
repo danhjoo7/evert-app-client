@@ -22,9 +22,6 @@ class NavBar extends React.Component {
         return (
             <nav className="navbar" >
                 <div className="leftnav">
-                    <a className="nav-logo site-nav-item" href="/">
-                        <img className="logo" src="http://res.cloudinary.com/noah-s-kang/image/upload/v1500577997/impetus_logo_wndm0c.svg" />
-                    </a>
                 </div>
                 <div className="centernav">
                     <SearchContainer />
@@ -37,7 +34,7 @@ class NavBar extends React.Component {
                     </div>
                     {this.loginOrOut()}
                     {this.showIfLoggedIn()}
-                    <Link className="site-nav-item" id="sell-item" to="/items/new">SELL AN ITEM</Link>
+                    <Link className="site-nav-item" id="sell-item" to="/sell-item">SELL AN ITEM</Link>
                 </div>
             </nav >
         )

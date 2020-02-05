@@ -1,0 +1,19 @@
+.display-container {
+    padding: 60px;
+    
+    .display-item-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 20px;
+    }
+
+    .item-card {
+            position: relative;
+            border: 1px solid rgb(242, 242, 245);
+            border-radius: 15px;
+            width: 350px;
+            height: 410px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+}
