@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import signIn from '../actions/signIn'
+import './user.scss'
 
 class Login extends React.Component {
     constructor() {

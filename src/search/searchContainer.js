@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-// import SearchBar from './searchBar'
 import fetchSearchItem from '../actions/fetchSearchItem'
+import './search.scss'
 
 class Search extends React.Component {
     constructor() {
@@ -21,7 +21,7 @@ class Search extends React.Component {
     handleKeyPress = (e) => {
         if (e.key == "Enter") {
             // fetching items based on search input
-           this.props.fetchSearchItem(e)
+            this.props.fetchSearchItem(e)
         }
     }
 
@@ -31,13 +31,15 @@ class Search extends React.Component {
         return (
             <div className="search-bar-container">
                 <div className="search-icon">
-                    <img src="https://process.fs.grailed.com/rdmZ5l2mQBGvdtVr2xCG" />
+                    <img className="magnifying-glass-icon" src="https://process.fs.grailed.com/rdmZ5l2mQBGvdtVr2xCG" />
                 </div>
                 <div className="global-search">
-                    <form className="search-bar-input-form" onSubmit={this.searchItem}>
-                        <input className="navbar-search-item" onKeyPress={this.handleKeyPress} type="search" name="search" onChange={this.handleOnChange}  placeholder='Search...' value={this.state.search} />
-                        <button onSubmit={this.handleSearch} id="global-search-item-button" />
-                    </form>
+                    <div className="search-bar-input">
+                        <form onSubmit={this.searchItem}>
+                            <input className="navbar-search-item" onKeyPress={this.handleKeyPress} type="search" name="search" onChange={this.handleOnChange} placeholder='Search...' value={this.state.search} />
+                            {/* <button onSubmit={this.handleSearch} id="global-search-item-button" /> */}
+                        </form>
+                    </div>
                 </div>
             </div>
         )

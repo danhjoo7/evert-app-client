@@ -1,0 +1,69 @@
+.navbar {
+    // padding: 10px;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    // justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    // box-shadow: 0 0.9px 4px 0 rgba(0,0,0,0.05);
+    opacity: 2;
+    // align-items: center;
+
+    .leftnav {
+        position: absolute;
+        left: 50px;
+        
+    }
+
+    .app-name {
+        text-decoration: none;
+        color: black;
+        width: 120%;
+    }
+
+    .centernav {
+        position: absolute;
+        left: 130px;
+    }
+
+    .rightnav {
+        position: relative;
+        display: flex;
+        align-items: center;
+        left: 80%;
+
+        .explore-logo {
+            padding: 5px;
+            position: absolute;
+            left: -1.5em;
+            size: 5px;
+           
+        }
+
+        .site-nav-item-login {
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+    
+        }
+    
+        .site-nav-item-logout {
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+    
+        .site-nav-item-sell {
+            padding: 10px;
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    
+    
+}

@@ -6,7 +6,7 @@ import fetchAllItems from './actions/fetchAllItems'
 import fetchSearchItems from './actions/fetchSearchItem'
 import searchContainer from './search/searchContainer'
 import SellContainer from './sell/sellContainer'
-import NavBarContainer from './navbar/navbarContainer'
+import NavBar from './navbar/navbarContainer'
 import DisplayContainer from './display/displayContainer'
 import Favorites from './favorites/favoritesContainer'
 import Show from './show/Show'
@@ -26,7 +26,7 @@ class App extends React.Component {
     return (
       <div className="evert-app">
         <Router>
-          <NavBarContainer />
+          <NavBar />
           <Switch>
             <Route exact path='/' render={(props) => <DisplayContainer {...props} />} />
             <Route path='/login' render={(props) => <Login {...props} />} />

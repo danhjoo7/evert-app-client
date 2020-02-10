@@ -1,19 +1,40 @@
 .display-container {
+    top: 80px;
     padding: 60px;
+    position: relative;
+
+    .main-app-image {
+        height: 50%;
+        width: 100%;
+    }
     
     .display-item-cards {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 10px;
         row-gap: 20px;
+        align-self: center;
+    }
+
+    .display-header {
+        position: absolute;
+        top: -1em;
     }
 
     .item-card {
-            position: relative;
-            border: 1px solid rgb(242, 242, 245);
-            border-radius: 15px;
-            width: 350px;
-            height: 410px;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        position: relative;
+        border: 1px solid rgb(242, 242, 245);
+        width: 360px;
+        height: 410px;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+    }
+    
+        .item-card-details {
+            position: absolute;
+            bottom: 20px;
+        }
+
+        .item-image {
+            size: 5px;
         }
 }
