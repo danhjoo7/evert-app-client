@@ -24,8 +24,6 @@ class NavBar extends React.Component {
             <nav className="navbar" >
                 <div className="leftnav">
                     <a className="app-name" href="/">Evert</a>
-                </div>
-                <div className="centernav">
                     <SearchContainer />
                 </div>
                 <div className="rightnav">
@@ -36,7 +34,10 @@ class NavBar extends React.Component {
                     </div>
                     {this.loginOrOut()}
                     {this.showIfLoggedIn()}
-                    <Link className="site-nav-item-sell" id="sell-item" to="/sell-item">SELL AN ITEM</Link>
+                    <div className="site-nav-item-sell-container">
+                        <Link className="site-nav-item-sell" id="sell-item" to="/sell-item">SELL AN ITEM</Link>
+                    </div>
+                    {/* <Link className="site-nav-item-sell" id="sell-item" to="/sell-item">SELL AN ITEM</Link> */}
                 </div>
             </nav >
         )

@@ -7,25 +7,31 @@ const ItemCard = (props) => {
     return (
         <div className="item-card">
             <div className="item-image">
-                {/* <a href="/items/">
+                <a href="/items/">
 
-                </a> */}
+                </a>
                 {/* <img className="item-main-picture" alt="item-main-picture" src="https://gearmoose.com/wp-content/uploads/2019/09/peter-millar-mountainside-shirt-jacket.jpg" className="item-card-main-picture"></img> */}
             </div>
             <div className="item-card-details">
-                <div className="item-brand">
-                    <h4>{brand.toUpperCase()}</h4>
+                <div className="item-brand-size">
+                    <div className="item-brand">
+                        <h4>{brand.toUpperCase()}</h4>
+                    </div>
+                    <div className="item-size">
+                        <h5>{size}</h5>
+                    </div>
                 </div>
-                <div className="item-name">
-                    <h4>{name}</h4>
+                <div className="item-brand-name-price-favorites">
+                    <div className="item-name">
+                        <h4>{name}</h4>
+                    </div>
+                    <div className="item-price">
+                        <h5>${price}</h5>
+                    </div>
+                    <div className="item-favorites-button">
+                        <Button size="small" color="secondary">Add to Favorites</Button>
+                    </div>
                 </div>
-                <div className="item-price">
-                    <h5>${price}</h5>
-                </div>
-                <div className="item-image">
-                    <h5>{size}</h5>
-                </div>
-                <Button size="small" color="secondary">Add to Favorites</Button>
             </div>
 
         </div>

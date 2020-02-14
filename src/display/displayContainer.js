@@ -14,10 +14,10 @@ class Display extends React.Component {
         return (
             <div className="display-container">
                 <div className="main-app-image-container">
-                    <img className="main-app-image" alt="ecommerce and vintage items" src="https://thesunpapers.com/wp-content/uploads/sites/19/2019/04/fashion-1031469__340.jpg" />
+                    <img className="main-app-image" alt="ecommerce and vintage items" src="https://res.cloudinary.com/danhjoo/image/upload/v1581381657/fashion-1031469__340_gvawxs.jpg" />
                 </div>
                 <div>
-                    <h2 className="display-header">Featured</h2>
+                    <h2 className="display-header">Featured Items</h2>
                 </div>
                 <div className="display-item-cards">
                     {/* <hr size="2" align="center"></hr> */}

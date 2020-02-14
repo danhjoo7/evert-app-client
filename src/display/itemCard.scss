@@ -2,39 +2,80 @@
     top: 80px;
     padding: 60px;
     position: relative;
+    margin: 0 15px 0 15px ;
+
+    .main-app-image-container {
+        padding: 10px;
+        margin-right: 15px;
+    }
 
     .main-app-image {
-        height: 50%;
-        width: 100%;
+        display: flex;
+        background-image: url("https://res.cloudinary.com/danhjoo/image/upload/v1581381657/fashion-1031469__340_gvawxs.jpg");
+        position: absolute;
+        height: 80vh;
+        width: 87vw;
+        top: 0em;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        // margin-right: 15px;
     }
     
     .display-item-cards {
+        position: relative;
+        top: 570px;
+        // padding: 20px;
+        // left: 44px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 10px;
+        column-gap: 20px;
         row-gap: 20px;
-        align-self: center;
+        align-items: center;
+        width: 100%;
+        margin-right: 40px;
     }
+}
 
-    .display-header {
-        position: absolute;
-        top: -1em;
-    }
-
-    .item-card {
-        position: relative;
-        border: 1px solid rgb(242, 242, 245);
-        width: 360px;
-        height: 410px;
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
-    }
+.display-header {
+    position: absolute;
+    top: 580px;
     
-        .item-card-details {
-            position: absolute;
-            bottom: 20px;
-        }
+}
 
-        .item-image {
-            size: 5px;
-        }
+.item-card {
+    position: relative;
+    // top: 35px;
+    border: 1px solid rgb(242, 242, 245);
+    width: 360px;
+    height: 410px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+
+
+    .item-card-details {
+        position: absolute;
+        bottom: -10px;
+        // display: flex;
+        // flex-direction: column;
+        // position: relative;
+        // top: 30px;
+    }
+
+    .item-image {
+        size: 5px;
+    }
+}
+
+.item-brand-size {
+    display: flex;
+    flex-direction: row;
+
+    .item-size {
+        font-size: 1.15em;
+        display: flex;
+        position: relative;
+        left: 225px;
+        bottom: 5px;
+    }
 }

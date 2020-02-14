@@ -1,6 +1,3 @@
-body { 
-  padding-top: 40px; 
-}
 
 .search-icon {
   height: 15px;
@@ -37,10 +34,7 @@ body {
   width: 20px;
 }
 
-.display-header {
-  /* position: absolute; */
-  top: 50px;
-}
+
 
 
 
