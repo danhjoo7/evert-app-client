@@ -1,45 +1,74 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SearchContainer from '../search/searchContainer'
-import './navbar.scss'
+import styled from 'styled-components'
+
 
 class NavBar extends React.Component {
+    // constructor() {
+    //     super()
 
-    loginOrOut() {
-        if (this.props.currentUser) {
-            return (<button className="site-nav-item-logout" onClick={this.props.logout} id="log-out">LOG OUT</button>)
-        } else {
-            return (<Link className="site-nav-item-login" to="/login">LOG IN</Link>);
-        }
-    }
+    //     this.state = {
 
-    showIfLoggedIn() {
-        if (this.props.currentUser) {
-            return (<Link className="site-nav-item" id="my-favorites" to="/my-favorites">ME</Link>)
+    //     }
+    // }
+    logInOrOut = () => {
+        if (this.props.currentUser){
+            return <a>Account</a>
         }
     }
 
     render() {
+        const StyledContainer = styled.div`
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            height: 90px;
+            align-items: center;
+        `
+        const RightNav = styled.div`
+            position: absolute;
+            right: 40px;
+            
+
+            ul {
+                position: relative;
+                display: inline-block;
+                display: flex;
+                flex-direction: row;
+                list-style-type: none;
+                margin-right:20px;
+                li {
+                    margin-left: 43px;
+                    a {
+                        text-decoration: none;
+                        font-family: F Grotesk,Helvetica,sans-serif;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 22px;
+                        color: black;
+                    }
+                }
+            }    
+        `
+        const LeftNav = styled.div`
+        `
+
         return (
-            <nav className="navbar" >
-                <div className="leftnav">
-                    <a className="app-name" href="/">Evert</a>
-                    <SearchContainer />
-                </div>
-                <div className="rightnav">
-                    <div className="explore-logo">
-                        <Link className="site-nav-item-discover" to="/discover">
-                            <img className="explore" src="http://res.cloudinary.com/noah-s-kang/image/upload/v1501275950/compass-icon-3_ixdm3h.svg" />
-                        </Link>
-                    </div>
-                    {this.loginOrOut()}
-                    {this.showIfLoggedIn()}
-                    <div className="site-nav-item-sell-container">
-                        <Link className="site-nav-item-sell" id="sell-item" to="/sell-item">SELL AN ITEM</Link>
-                    </div>
-                    {/* <Link className="site-nav-item-sell" id="sell-item" to="/sell-item">SELL AN ITEM</Link> */}
-                </div>
-            </nav >
+            <StyledContainer>
+                <LeftNav>
+
+                </LeftNav>
+                <RightNav>
+                    <ul>
+                        <li><a href="">Cart</a></li>
+                        <li><a href="/sign-in">Account</a></li>
+                    </ul>
+                  
+                    
+                </RightNav>
+
+            </StyledContainer>
         )
     }
 }
