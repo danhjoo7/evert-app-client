@@ -13,8 +13,10 @@ class NavBar extends React.Component {
     //     }
     // }
     logInOrOut = () => {
-        if (this.props.currentUser){
+        if (!this.props.currentUser) {
             return <a>Account</a>
+        } else {
+            return <a>Hi, ${this.props.currentUser.name}</a>
         }
     }
 
@@ -29,10 +31,7 @@ class NavBar extends React.Component {
         const RightNav = styled.div`
             position: absolute;
             right: 40px;
-            
-
             ul {
-                position: relative;
                 display: inline-block;
                 display: flex;
                 flex-direction: row;
@@ -52,22 +51,59 @@ class NavBar extends React.Component {
             }    
         `
         const LeftNav = styled.div`
+            position: absolute;
+            ul {
+                display: inline-block;
+                display: flex;
+                flex-direction: row;
+                list-style-type: none;
+                
+                li {
+                    margin-left: 43px;
+                    a {
+                        text-decoration: none;
+                        font-family: F Grotesk,Helvetica,sans-serif;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 22px;
+                        color: black;
+                    }
+                }
+            }
         `
+
+        const CenterNav = styled.div`
+            position: absolute;
+            left: 47%;
+            .evert-logo {
+                font-family: F Grotesk,Helvetica,sans-serif;
+                font-weight: 550;
+                font-size: 25px;
+                line-height: 22px;
+                text-decoration: none;
+                color: black;
+            }
+        `
+        
 
         return (
             <StyledContainer>
                 <LeftNav>
-
+                    <ul>
+                        <li><Link to="/shop-items">Shop</Link></li>
+                        <li><Link to="/about-us">Why Evert</Link></li>
+                        <li><Link to="/reviews">Reviews</Link></li>
+                    </ul>
                 </LeftNav>
+                <CenterNav>
+                    <Link className="evert-logo" to="/">Evert</Link>
+                </CenterNav>
                 <RightNav>
                     <ul>
-                        <li><a href="">Cart</a></li>
-                        <li><a href="/sign-in">Account</a></li>
+                        <li><Link to="/my-cart">Cart</Link></li>
+                        <li><Link to="/account">Account</Link></li>
                     </ul>
-                  
-                    
                 </RightNav>
-
             </StyledContainer>
         )
     }
