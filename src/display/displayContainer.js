@@ -1,8 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import styled from 'styled-components'
 import ItemCard from './itemCard'
-import './itemCard.scss'
-
 
 
 class Display extends React.Component {
@@ -11,8 +10,18 @@ class Display extends React.Component {
     }
 
     render() {
+
+        const StyledContainer = styled.div`
+            position: relative;
+            height: 500px;
+            width: 100%;
+            top: -1px;
+            background: #F7F2F0;
+           
+        `
+
         return (
-            <div className="display-container">
+            <StyledContainer className="display-container">
                 <div className="main-app-image-container">
                     <img className="main-app-image" alt="ecommerce and vintage items" src="https://res.cloudinary.com/danhjoo/image/upload/v1581381657/fashion-1031469__340_gvawxs.jpg" />
                 </div>
@@ -27,7 +36,7 @@ class Display extends React.Component {
                         }
                         )}
                 </div>
-            </div >
+            </StyledContainer >
         )
     }
 }
