@@ -30,14 +30,14 @@ class Search extends React.Component {
         // const 
         return (
             <div className="search-bar-container">
-                {/* <div className="search-icon">
+                <div className="search-icon">
                     <img className="magnifying-glass-icon" src="https://process.fs.grailed.com/rdmZ5l2mQBGvdtVr2xCG" />
-                </div> */}
+                </div>
                 <div className="global-search">
                     <div className="search-bar-input">
                         <form onSubmit={this.searchItem}>
                             <input className="navbar-search-item" onKeyPress={this.handleKeyPress} type="search" name="search" onChange={this.handleOnChange} placeholder='Search for items...' value={this.state.search} />
-                            {/* <button onSubmit={this.handleSearch} id="global-search-item-button" /> */}
+                            <button onSubmit={this.handleSearch} id="global-search-item-button" />
                         </form>
                     </div>
                 </div>

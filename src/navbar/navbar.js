@@ -21,7 +21,7 @@ class NavBar extends React.Component {
             display: flex;
             flex-direction: row;
             position: relative;
-            height: 90px;
+            height: 80px;
             align-items: center;
         `
         const RightNav = styled.div`
@@ -67,7 +67,7 @@ class NavBar extends React.Component {
             position: absolute;
             left: 48%;
             .evert-logo {
-                font-family: F Grotesk,Helvetica,sans-serif;
+                font-family: Montserrat, Open Sans, Helvetica Neue;
                 font-weight: 550;
                 font-size: 22px;
                 line-height: 22px;
