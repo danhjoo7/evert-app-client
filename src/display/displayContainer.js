@@ -13,35 +13,43 @@ class Display extends React.Component {
 
         const StyledContainer = styled.div`
             position: relative;
-            height: 700px;
+            height: 1200px;
             width: 100%;
-            bottom: 20px;
             background: #F7F2F0;
+            top: 90px;
 
             .main-app-image-container {
                 position: absolute;
-                width: 50%;
                 left: 50%;
+                width: 50%;
+                top: 40px;
                 img {
                     position: absolute;
                     width: 550px;
                     height: 400px;
-                    right: 50px;
-                    top: 50px;
-                    border-radius: 10px;
+                    right: 80px;
+                    top: 15px;
+                    border-radius: 5px;
                 }
             }
-            
         `
+        const DisplayHeader = styled.div`
+            position: absolute;
+            font-size: 33px;
+            width: 400px;
+            left: 50px;
+            padding: 30px;
+            
 
+        `
         return (
             <StyledContainer>
                 <div className="main-app-image-container">
-                    <img className="main-app-image" alt="ecommerce and vintage items" src="http://advertisementfeature.cnn.com/2017/tokyo-tourism/dist/images/story/experience/carousel-2/4-1024.jpg" />
+                    <img alt="ecommerce and vintage items" src="http://advertisementfeature.cnn.com/2017/tokyo-tourism/dist/images/story/experience/carousel-2/4-1024.jpg" />
                 </div>
-                <div>
-                    <h2 className="display-header"></h2>
-                </div>
+                <DisplayHeader>
+                    <h1>The ideal place for secondhand, vintage items.</h1>
+                </DisplayHeader>
                 <div className="display-item-cards">
                     {/* <hr size="2" align="center"></hr> */}
                     {this.props.items.filter((item) => item.name.toLowerCase().startsWith(this.props.search.toLowerCase()) ||

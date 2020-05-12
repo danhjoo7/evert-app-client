@@ -15,18 +15,20 @@ class NavBar extends React.Component {
     }
 
     render() {
-        
 
         const StyledContainer = styled.div`
-            display: flex;
-            flex-direction: row;
-            position: relative;
-            height: 80px;
-            align-items: center;
+            height: 90px;
+            position: fixed;
+            overflow: hidden;
+            width: 100%;
+            background: white;
+            z-index: 100;
         `
+    
         const RightNav = styled.div`
             position: absolute;
             right: 40px;
+            top: 15px;
             ul {
                 list-style-type: none;
                 margin-right:20px;
@@ -46,6 +48,7 @@ class NavBar extends React.Component {
         `
         const LeftNav = styled.div`
             position: absolute;
+            top: 15px;
             ul {
                 list-style-type: none;
                 li {
@@ -65,19 +68,17 @@ class NavBar extends React.Component {
 
         const CenterNav = styled.div`
             position: absolute;
+            top: 25px;
             left: 48%;
-            .evert-logo {
-                font-family: Montserrat, Open Sans, Helvetica Neue;
-                font-weight: 550;
-                font-size: 22px;
-                line-height: 22px;
+            .evert-logo {        
                 text-decoration: none;
                 color: black;
+                font-size: 22px;             
             }
         `
 
         return (
-                <StyledContainer>
+            <StyledContainer>
                     <LeftNav>
                         <ul>
                             <li><Link to="/shop-items">Shop</Link></li>
@@ -86,7 +87,7 @@ class NavBar extends React.Component {
                         </ul>
                     </LeftNav>
                     <CenterNav>
-                        <Link className="evert-logo" to="/">Evert</Link>
+                        <Link className="evert-logo" to="/">evert</Link>
                     </CenterNav>
                     <RightNav>
                         <ul>
@@ -94,7 +95,7 @@ class NavBar extends React.Component {
                             <li><Link to="/account">Account</Link></li>
                         </ul>
                     </RightNav>
-                </StyledContainer>
+            </StyledContainer>
         )
     }
 }
