@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import ItemCard from './itemCard'
 
@@ -39,8 +40,27 @@ class Display extends React.Component {
             width: 400px;
             left: 50px;
             padding: 30px;
-            
+            .shop-collections-button {
 
+            }
+        `
+        const StyledButton = styled.button`
+            position: relative;
+            bottom: 10px;
+            background-color: #6495ED;
+            height: 50px;
+            width: 170px;
+            border-width: 2px;
+            border-radius: 30px;
+            border-color: #6495ED;
+            font-family: F Grotesk,Helvetica,sans-serif;
+            font-size: 16px;
+            font-color: white;
+            
+            .shop-collections-button {
+                text-decoration: none;
+                color: white;
+            }
         `
         return (
             <StyledContainer>
@@ -49,6 +69,9 @@ class Display extends React.Component {
                 </div>
                 <DisplayHeader>
                     <h1>The ideal place for secondhand, vintage items.</h1>
+                    <StyledButton>
+                        <Link to="/shop/collections" className="shop-collections-button">Shop Items</Link>
+                    </StyledButton>
                 </DisplayHeader>
                 <div className="display-item-cards">
                     {/* <hr size="2" align="center"></hr> */}

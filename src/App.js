@@ -33,8 +33,9 @@ class App extends React.Component {
             <Route path='/signup' render={(props) => <Signup {...props} />} />
             {/* <Route path='/my-favorites' render={(props) => <Favorites {...props} />} /> */}
             {/* <Route path='/my-profile' render={(props) => <Profile {...props} />} /> */}
+            {/* <Route path='/shop/collections' render={(props) => <Favorites {...props} />} /> */}
             <Route path='/sell-item' render={(props) => <SellContainer {...props} />} />
-            <Route path='/discover' render={(props) => <DisplayContainer {...props} />} />
+            {/* <Route path='/discover' render={(props) => <DisplayContainer {...props} />} /> */}
             <Route path='/item/:id' render={(props) => <Show {...props} />} />
           </Switch>
         </Router>
