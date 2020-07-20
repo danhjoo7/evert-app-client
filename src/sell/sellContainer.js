@@ -21,14 +21,16 @@ class Sell extends React.Component {
                         </div>
                         <div className="form-comment">
                             <p>
-                                Selling an item is pretty easy...just fill in a few details and images, and you'll be all set!
+                                Selling an item is pretty easy......just fill in a few details, add some images, and you'll be all set!
                             </p>
                         </div>
                         <label for="exampleInputEmail1">Brand Name</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>
+                        <br></br>
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
                     <div className="form-group">
+                        <br></br>
                         <label for="exampleInputPassword1">Password</label>
                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></input>
                     </div>

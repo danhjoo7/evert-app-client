@@ -19,12 +19,11 @@ class NavBar extends React.Component {
         const StyledContainer = styled.div`
             height: 90px;
             position: fixed;
-            overflow: hidden;
             width: 100%;
             background: white;
             z-index: 100;
         `
-    
+        
         const RightNav = styled.div`
             position: absolute;
             right: 40px;
@@ -39,7 +38,7 @@ class NavBar extends React.Component {
                         text-decoration: none;
                         font-family: F Grotesk,Helvetica,sans-serif;
                         font-weight: 500;
-                        font-size: 16px;
+                        font-size: 14px;
                         line-height: 22px;
                         color: black;
                     }
@@ -58,7 +57,7 @@ class NavBar extends React.Component {
                         text-decoration: none;
                         font-family: F Grotesk,Helvetica,sans-serif;
                         font-weight: 500;
-                        font-size: 16px;
+                        font-size: 14px;
                         line-height: 22px;
                         color: black;
                     }
@@ -84,6 +83,7 @@ class NavBar extends React.Component {
                             <li><Link to="/shop-items">Shop</Link></li>
                             <li><Link to="/about-us">Why Evert</Link></li>
                             <li><Link to="/reviews">Reviews</Link></li>
+                            <li><Link to="/sell-item">Sell</Link></li>
                         </ul>
                     </LeftNav>
                     <CenterNav>

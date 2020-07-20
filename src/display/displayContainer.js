@@ -36,9 +36,9 @@ class Display extends React.Component {
         `
         const DisplayHeader = styled.div`
             position: absolute;
-            font-size: 33px;
+            font-size: 21px;
+            // font-weight: 
             width: 400px;
-            left: 50px;
             padding: 30px;
             .shop-collections-button {
 
@@ -59,8 +59,10 @@ class Display extends React.Component {
             
             .shop-collections-button {
                 text-decoration: none;
-                color: white;
+                color: white;    
             }
+
+
         `
         return (
             <StyledContainer>
@@ -68,7 +70,7 @@ class Display extends React.Component {
                     <img alt="ecommerce and vintage items" src="http://advertisementfeature.cnn.com/2017/tokyo-tourism/dist/images/story/experience/carousel-2/4-1024.jpg" />
                 </div>
                 <DisplayHeader>
-                    <h1>The ideal place for secondhand, vintage items.</h1>
+                    <h1>The ideal place for secondhand, used items.</h1>
                     <StyledButton>
                         <Link to="/shop/collections" className="shop-collections-button">Shop Items</Link>
                     </StyledButton>

@@ -5,13 +5,13 @@ import reAuth from './actions/reAuth'
 import fetchAllItems from './actions/fetchAllItems'
 import fetchSearchItems from './actions/fetchSearchItem'
 import searchContainer from './search/searchContainer'
-import SellContainer from './sell/sellContainer'
+import Sell from './sell/sellContainer'
 import NavBar from './navbar/navbar'
 import DisplayContainer from './display/displayContainer'
-import Favorites from './favorites/favoritesContainer'
 import Show from './show/Show'
 import Login from './user/signIn'
 import Signup from './user/signUp'
+import CollectionCategories from './show/collectionCategories'
 import './App.css'
 
 
@@ -33,8 +33,8 @@ class App extends React.Component {
             <Route path='/signup' render={(props) => <Signup {...props} />} />
             {/* <Route path='/my-favorites' render={(props) => <Favorites {...props} />} /> */}
             {/* <Route path='/my-profile' render={(props) => <Profile {...props} />} /> */}
-            {/* <Route path='/shop/collections' render={(props) => <Favorites {...props} />} /> */}
-            <Route path='/sell-item' render={(props) => <SellContainer {...props} />} />
+            <Route path='/shop/collections' render={(props) => <CollectionCategories {...props} />} />
+            <Route path='/sell-item' render={(props) => <Sell {...props} />} />
             {/* <Route path='/discover' render={(props) => <DisplayContainer {...props} />} /> */}
             <Route path='/item/:id' render={(props) => <Show {...props} />} />
           </Switch>
